@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LocationApp</string>
+    <string name="general_error">An error occured while processing this request</string>
+    <string name="locations_download_error">The server is currently unavailable. Please try again later</string>
+    <string name="location_latitude">Latitude - %1s</string>
+    <string name="location_longitude">Longitude - %1s</string>
+    <string name="location_address">Location Address - %1s</string>
+</resources>

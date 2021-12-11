@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="location"
+            type="com.test.locationapp.dto.LocationDto" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_normal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/location_image"
+            android:layout_width="@dimen/location_image_square_size"
+            android:layout_height="@dimen/location_image_square_size"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/location_address"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/padding_normal"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/location_image"
+            app:layout_constraintTop_toTopOf="@id/location_image"
+            android:text='@{location.address ?? "Missing Location Address"}'
+            tools:text="Location Address" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/location_distance_to_self"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/padding_normal"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/location_image"
+            app:layout_constraintTop_toBottomOf="@id/location_address"
+            tools:text="498 km" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
